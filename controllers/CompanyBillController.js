@@ -3,7 +3,6 @@ const BillSchema = require("../models/BillSchema");
 module.exports={
     postCompnaybill: async(req, res) => {
       console.log(req.body.data[0].particular);
-      // const i=0;
       const data=[];
       for(let i = 0 ;i < req.body.data.length;i++){
                 const itemdata = {itemName:req.body.data[i]?.particular,
@@ -49,16 +48,5 @@ module.exports={
           console.log(error);
         }
     },
-
-//     delcompanydata: async(req, res) => {
-//       console.log(req.params);
-//       try {
-//       const result = await companyModel.findByIdAndRemove({_id: req.params.comid})
-//       console.log(result, "result");
-//        res.json(result);
-//       } catch (error) {
-//         console.log(error);
-//       }
-//   },
 
 }
